@@ -1,0 +1,52 @@
+operacao_lista = ["1 - SOMA", "2 - SUBTRAÇÃO", "3 - MULTIPLICAÇÃO", "4 - DIVISÃO", "5 - FATORIAL", "6 - POTÊNCIA0"]
+
+print("SELECIONE A OPERAÇÃO")
+print(operacao_lista[0])
+print(operacao_lista[1])
+print(operacao_lista[2])
+print(operacao_lista[3])
+print(operacao_lista[4])
+print(operacao_lista[5])
+
+print("*** CALCULADORA ***")
+
+resultado = 0
+
+operacao = int(input("OPERAÇÃO: "))
+
+if operacao == 1 or operacao == 2 or operacao == 3 or operacao == 4:
+    numero1 = int(input("Digite o primeiro número: "))
+    numero2 = int(input("Digite o segundo número: "))
+    if operacao == 1:
+        print(operacao_lista[0])
+        resultado = numero1 + numero2
+    elif operacao == 2:
+        print(operacao_lista[1])
+        resultado = numero1 - numero2
+    elif operacao == 3:
+        print(operacao_lista[2])
+        resultado = numero1 * numero2
+    elif operacao == 4:
+        print(operacao_lista[3])
+        resultado = numero1 / numero2
+    else:
+        print("Digite uma operação válida")
+elif operacao == 5:
+    print(operacao_lista[4])
+    numero1 = int(input("Digite um número: "))
+    resultado = 1
+    contador = 1
+    while contador <= numero1:
+        resultado*=contador
+        contador+=1
+elif operacao == 6:
+    print(operacao_lista[5])
+    numero1 = int(input("Digite o número a ser elevado: "))
+    numero2 = int(input("Digite a potência: "))
+    resultado = 1
+    contador = 1
+    while contador <= numero2:
+        resultado *= numero1
+        contador += 1
+
+print(resultado)
